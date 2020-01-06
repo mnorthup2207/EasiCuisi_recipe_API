@@ -12,28 +12,30 @@
 
 <body>
     <img class="img1" src="assets/img/landing.jpg" alt="CookBook img by">
-    <div id="formDiv" class="col s6">
-        <div class="col s3 md6">
-            <label for="mealInput">Select a Meal Type</label>
-            <select id="mealInput" name="mealInput">
-                <option value="" disabled selected>Choose</option>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-            </select>
-            <div class="col s3 md6">
+    <div class="row">
+        <div id="formDiv" class="col s3">
+            <div class="col s12">
+                <label for="mealInput">Select a Meal Type</label>
+                <select id="mealInput" name="mealInput">
+                    <option value="" disabled selected>Choose</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                </select>
             </div>
-            <label for="dietInput">Select a Diet Type</label>
-            <select id="dietInput" name="dietInput">
-                <option value="" disabled selected>Choose</option>
-                <option value="Balanced">Balanced</option>
-                <option value="High-protein">High-protein</option>
-                <option value="High-fiber">High-fiber</option>
-                <option value="Low-fat">Low-fat</option>
-                <option value="Low-carb">Low-carb</option>
-                <option value="Low-sodium">Low-sodium</option>
-            </select>
-            <div class="col s3 md6">
+            <div class="col s12">
+                <label for="dietInput">Select a Diet Type</label>
+                <select id="dietInput" name="dietInput">
+                    <option value="" disabled selected>Choose</option>
+                    <option value="Balanced">Balanced</option>
+                    <option value="High-protein">High-protein</option>
+                    <option value="High-fiber">High-fiber</option>
+                    <option value="Low-fat">Low-fat</option>
+                    <option value="Low-carb">Low-carb</option>
+                    <option value="Low-sodium">Low-sodium</option>
+                </select>
+            </div>
+            <div class="col s12">
                 <label for="servingInput">Select a Serving Size</label>
                 <select id="mealInput" name="mealInput">
                     <option value="" disabled selected>Choose</option>
@@ -42,16 +44,22 @@
                     <option value="6">6</option>
                     <option value="8">8</option>
                     <option value="undefined">Undefined</option>
-                </select>
             </div>
-            <form action="slider">
-                <p class="range-field">
-                    <label for="test5">Select Calorie Count</label>
-                  <input type="range" id="test5" min="100" max="10000" />
-                </p>
-              </form>
+            </select>
+            <div class="col s12">
+                <form action="slider">
+                    <p class="range-field">
+                        <label for="test5">Select Calorie Count</label>
+                        <input type="range" id="test5" min="100" max="10000" />
+                    </p>
+            </div>
+            </form>
         </div>
-            <button class="search">Search</button>
+        <button class="search">Search</button>
+    </div>
+    <div id="resultsDiv" class="col s6">
+
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

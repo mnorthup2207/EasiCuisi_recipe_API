@@ -11,11 +11,12 @@ body{
 #formDiv{
     box-sizing: border-box;
     background-color: white;
-    left: 13%;
+    border-radius: 1%;
+    left: 9%;
     /* opacity: 80%; */
     position: absolute;
     padding: 1%;
-    top: 20%;
+    top: 15%;
     z-index: 10;
 }
 .range-field{
