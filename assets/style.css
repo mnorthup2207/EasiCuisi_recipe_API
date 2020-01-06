@@ -1,0 +1,10 @@
+body{
+    margin: 0 auto;
+}
+.img1{
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
