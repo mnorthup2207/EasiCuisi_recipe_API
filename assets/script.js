@@ -34,17 +34,15 @@ protein.on('change', function(){
         }).then(function(response) {
 
             $('.foodImg1').attr('src', response.hits[0].recipe.image)
-            $('.a').append($(`<a>${response.hits[0].recipe.label}</a>`))
+            $('.a').html(response.hits[0].recipe.label)
             $('.foodImg2').attr('src', response.hits[1].recipe.image)
-            $('.b').append($(`<a>${response.hits[1].recipe.label}</a>`))
+            $('.b').html(response.hits[1].recipe.label)
             $('.foodImg3').attr('src', response.hits[2].recipe.image)
-            $('.c').append($(`<a>${response.hits[2].recipe.label}</a>`))
+            $('.c').html(response.hits[2].recipe.label)
             $('.foodImg4').attr('src', response.hits[3].recipe.image)
-            $('.d').append($(`<a>${response.hits[3].recipe.label}</a>`))
+            $('.d').html(response.hits[3].recipe.label)
             $('.foodImg5').attr('src', response.hits[4].recipe.image)
-            $('.e').append($(`<a>${response.hits[4].recipe.label}</a>`))
-            console.log(response.hits[0].recipe.label)
-
+            $('.e').html(response.hits[4].recipe.label)
         });
 
 })

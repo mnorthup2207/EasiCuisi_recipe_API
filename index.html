@@ -83,7 +83,7 @@
                 <form action="slider">
                     <p class="range-field">
                         <label for="test5">Select Calorie Count</label>
-                        <input type="range" id="test5" min="100" max="10000" />
+                        <input type="range" id="test5" start="0" min="100" max="10000" />
                     </p>
             </div>
             <div class="col s12">
@@ -123,11 +123,12 @@
     </div>
     <div id="resultsDiv" class="col s4">
         <div class="carousel">
-            <a class="carousel-item a" href="#one!"><img class="foodImg1" src=""></a>
-            <a class="carousel-item b" href="#two!"><img class="foodImg2" src=""></a>
-            <a class="carousel-item c" href="#three!"><img class="foodImg3" src=""></a>
-            <a class="carousel-item d" href="#four!"><img class="foodImg4" src=""></a>
-            <a class="carousel-item e" href="#five!"><img class="foodImg5" src=""></a>
+            <a class="carousel-item" href="#one!"><img class="foodImg1" src=""><label class="a" for="foodImg1"></label></a>
+            <a class="carousel-item" href="#two!"><img class="foodImg2" src=""><label class="b" for="foodImg2"></label></a>
+            <a class="carousel-item" href="#three!"><img class="foodImg3" src=""><label class="c" for="foodImg3"></label></a>
+            <a class="carousel-item" href="#four!"><img class="foodImg4" src=""><label class="d" for="foodImg4"></label></a>
+            <a class="carousel-item" href="#five!"><img class="foodImg5" src=""><label class="e" for="foodImg5"></label></a>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
