@@ -56,13 +56,32 @@
             </div>
         </div>
     </div>
-        <div id="resultsDiv" class="col s4">
-            <div class="carousel carousel-slider">
+        
+        <div id="resultsDiv" class="col s4" >
+            <div class="carousel carousel-slider" >
+                <button id="myBtn" >
                 <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
                 <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
                 <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
                 <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+            
+                </button>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                  </div>
+                </div>
+
+                
             </div>
+            
         </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -70,3 +89,13 @@
 </body>
 
 </html>
+
+<!-- <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div> -->
