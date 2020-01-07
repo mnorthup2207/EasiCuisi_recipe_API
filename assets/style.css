@@ -12,11 +12,12 @@ body{
     box-sizing: border-box;
     background-color: white;
     border-radius: 1%;
-    left: 9%;
+    height: 100vh;
+    left: 0%;
     /* opacity: 80%; */
     position: absolute;
     padding: 1%;
-    top: 15%;
+    top: 0%;
     z-index: 10;
 }
 #resultsDiv{

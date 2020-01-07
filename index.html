@@ -15,18 +15,34 @@
     <div class="row">
         <div id="formDiv" class="col s3">
             <div class="col s12">
-                <label for="mealInput">Select a Meal Type</label>
-                <select id="mealInput" name="mealInput">
+                <label for="proteinInput">Protein Type *</label>
+                <select id="proteinInput" name="proteinInput">
                     <option value="" disabled selected>Choose</option>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                </select>
+                    <option value=""></option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Pork">Pork</option>
+                    <option value="Eggs">Eggs</option>
+                    <option value="Oats">Oats</option>
+                    <option value="Cheese">Cheese</option>
+                    <option value="Yogurt">Yogurt</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Quinoa">Quinoa<Quinoa/option> <option value="Lentils">Lentils<Quinoa/option> <option
+                                value="Turkey">Turkey<Quinoa/option> </select> </div> <div class="col s12">
+                                    <label for="mealInput">Meal Type</label>
+                                    <select id="mealInput" name="mealInput">
+                                        <option value="" disabled selected>Choose</option>
+                                        <option value=""></option>
+                                        <option value="Breakfast">Breakfast</option>
+                                        <option value="Lunch">Lunch</option>
+                                        <option value="Dinner">Dinner</option>
+                                    </select>
             </div>
             <div class="col s12">
-                <label for="dietInput">Select a Diet Type</label>
+                <label for="dietInput">Diet Type</label>
                 <select id="dietInput" name="dietInput">
                     <option value="" disabled selected>Choose</option>
+                    <option value=""></option>
                     <option value="Balanced">Balanced</option>
                     <option value="High-protein">High-protein</option>
                     <option value="High-fiber">High-fiber</option>
@@ -36,34 +52,77 @@
                 </select>
             </div>
             <div class="col s12">
-                <label for="servingInput">Select a Serving Size</label>
+                <label for="servingInput">Serving Size</label>
                 <select id="mealInput" name="mealInput">
                     <option value="" disabled selected>Choose</option>
+                    <option value=""></option>
                     <option value="2">2</option>
                     <option value="4">4</option>
                     <option value="6">6</option>
                     <option value="8">8</option>
-                    <option value="undefined">Undefined</option>
+                </select>
             </div>
-            </select>
+            <div class="col s12">
+                <label for="cookingInput">Cooking Time</label>
+                <select id="cookingInput" name="cookingInput">
+                    <option value="" disabled selected>Choose</option>
+                    <option value=""></option>
+                    <option value="15">15 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="60">60 minutes</option>
+                </select>
+            </div>
             <div class="col s12">
                 <form action="slider">
                     <p class="range-field">
                         <label for="test5">Select Calorie Count</label>
                         <input type="range" id="test5" min="100" max="10000" />
                     </p>
-                    <button class="search">Search</button>
             </div>
+            <div class="col s12">
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Peanut Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Tree Nut Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Dairy Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Egg Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Shell Fish Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Wheat Free</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Soy Free</span>
+                    </label>
+                </p>
+            </div>
+            <button class="search">Search</button>
         </div>
     </div>
-        <div id="resultsDiv" class="col s4">
-            <div class="carousel carousel-slider">
-                <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-                <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-                <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-                <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
-            </div>
+    <div id="resultsDiv" class="col s4">
+        <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
         </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/script.js"></script>
