@@ -8,6 +8,9 @@ body{
     width: 100%;
     z-index: 0;
 }
+/* .carousel{
+    overflow: visible;
+} */
 #formDiv{
     box-sizing: border-box;
     background-color: white;
@@ -21,11 +24,7 @@ body{
     z-index: 10;
 }
 #resultsDiv{
-    box-sizing: border-box;
-    /* background-color: white; */
-    border-radius: 1%;
-    left: 42%;
-    /* opacity: 80%; */
+    left: 50%;
     position: absolute;
     padding: 1%;
     top: 15%;
@@ -34,3 +33,10 @@ body{
 .range-field{
     margin: 15% 0% 0% 0%;
 }
+.carousel .carousel-item>img {
+    /* opacity: 0%; */
+    width: 300%;
+}
+/* .carousel{
+    display: none;
+} */

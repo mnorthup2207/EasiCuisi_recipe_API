@@ -1,13 +1,22 @@
 
 
 // selector and range in formDiv
-$(document).ready(function(){
+$(document).ready(function () {
     $('select').formSelect();
-  });
+});
 // carousel functions
-$(document).ready(function(){
+$(document).ready(function () {
     $('.carousel').carousel();
-  });
+});
+
+// event listener for search bar
+$('.search').on('click', function (e) {
+    e.preventDefault();
+    // console.log($('#resultsDiv'))
+    $('.carousel').show();
+    
+    
+});
 
 
 
