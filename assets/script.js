@@ -1,3 +1,5 @@
+
+
 // selector and range in formDiv
 $(document).ready(function () {
     $('select').formSelect();
@@ -48,8 +50,3 @@ protein.on('change', function(){
 })
 
 
-// 1. protein selected
-// 2. click of search loads carousel and populates with protein
-// //// b. if no protein selected, prompts modal please select a protein
-// 3. filter ajax call with additional inputs
-// 4.
