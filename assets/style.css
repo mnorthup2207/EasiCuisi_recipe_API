@@ -8,3 +8,28 @@ body{
     width: 100%;
     z-index: 0;
 }
+#formDiv{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 1%;
+    left: 9%;
+    /* opacity: 80%; */
+    position: absolute;
+    padding: 1%;
+    top: 15%;
+    z-index: 10;
+}
+#resultsDiv{
+    box-sizing: border-box;
+    /* background-color: white; */
+    border-radius: 1%;
+    left: 42%;
+    /* opacity: 80%; */
+    position: absolute;
+    padding: 1%;
+    top: 15%;
+    z-index: 10;
+}
+.range-field{
+    margin: 15% 0% 0% 0%;
+}
