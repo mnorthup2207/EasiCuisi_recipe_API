@@ -24,7 +24,7 @@ body{
     z-index: 10;
 }
 #resultsDiv{
-    left: 50%;
+    left: 40%;
     position: absolute;
     padding: 1%;
     top: 0%;
@@ -41,4 +41,10 @@ body{
 top: 125%;
 position: absolute;
 left: 310%;
+}
+.modal{
+    width: 20%;
+}
+.select-wrapper input.select-dropdown{
+    height: 2rem;
 }

@@ -14,126 +14,140 @@
     <img class="img1" src="assets/img/landing.jpg" alt="CookBook img by">
     <div class="row">
         <div id="formDiv" class="col s3">
-            <div class="col s12">
-                <label for="proteinInput">Protein Type *</label>
-                <select id="proteinInput" name="proteinInput">
-                    <option value="" disabled selected>Choose</option>
-                    <option value=""></option>
-                    <option value="Beef">Beef</option>
-                    <option value="Cheese">Cheese</option>
-                    <option value="Chicken">Chicken</option>
-                    <option value="Eggs">Eggs</option>
-                    <option value="Fish">Fish</option>
-                    <option value="Fruit">Fruit</option>
-                    <option value="Oats">Oats</option>
-                    <option value="Quinoa">Quinoa<Quinoa/option> <option value="Lentils">Lentils</option>
-                    <option value="Turkey">Turkey</option>
-                    <option value="Pork">Pork</option>
-                    <option value="Vegetable">Vegetable</option>
-                    <option value="Yogurt">Yogurt</option>
-                    <option value="apple">apple</option>
-                </select>
-            </div>
-            <div class="col s12">
-                <label for="mealInput">Meal Type</label>
-                <select id="mealInput" name="mealInput">
-                    <option value="" disabled selected>Choose</option>
-                    <option value=""></option>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                </select>
-            </div>
-            <div class="col s12">
-                <label for="dietInput">Diet Type</label>
-                <select id="dietInput" name="dietInput">
-                    <option value="" disabled selected>Choose</option>
-                    <option value=""></option>
-                    <option value="Balanced">Balanced</option>
-                    <option value="High-protein">High-protein</option>
-                    <option value="High-fiber">High-fiber</option>
-                    <option value="Low-fat">Low-fat</option>
-                    <option value="Low-carb">Low-carb</option>
-                    <option value="Low-sodium">Low-sodium</option>
-                </select>
-            </div>
-            <div class="col s12">
-                <label for="servingInput">Serving Size</label>
-                <select id="servingInput" name="servingInput">
-                    <option value="" disabled selected>Choose</option>
-                    <option value=""></option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="8">8</option>
-                </select>
-            </div>
-            <div class="col s12">
-                <label for="cookingInput">Cooking Time</label>
-                <select id="cookingInput" name="cookingInput">
-                    <option value="" disabled selected>Choose</option>
-                    <option value=""></option>
-                    <option value="15">15 minutes</option>
-                    <option value="30">30 minutes</option>
-                    <option value="45">45 minutes</option>
-                    <option value="60">60 minutes</option>
-                </select>
-            </div>
-            <div class="col s12">
-                <form action="slider">
-                    <p class="range-field">
-                        <label for="test5">Select Calorie Count</label>
-                        <input type="range" id="test5" start="0" min="100" max="10000" />
+            <form class="recipeInputs" name="recipeInputs" action="submit">
+                <div class="col s12">
+                    <label for="proteinInput">Protein Type *</label>
+                    <select id="proteinInput" name="proteinInput">
+                        <option value="" disabled selected>Choose</option>
+                        <option value=""></option>
+                        <option value="Beef">Beef</option>
+                        <option value="Cheese">Cheese</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Eggs">Eggs</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Fruit">Fruit</option>
+                        <option value="Oats">Oats</option>
+                        <option value="Quinoa">Quinoa<Quinoa/option> <option value="Lentils">Lentils</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Pork">Pork</option>
+                        <option value="Vegetable">Vegetable</option>
+                        <option value="Yogurt">Yogurt</option>
+                        <option value="Apple">Apple</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <label for="mealInput">Meal Type</label>
+                    <select id="mealInput" name="mealInput">
+                        <option value="" disabled selected>Choose</option>
+                        <option value=""></option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <label for="dietInput">Diet Type</label>
+                    <select id="dietInput" name="dietInput">
+                        <option value="" disabled selected>Choose</option>
+                        <option value=""></option>
+                        <option value="Balanced">Balanced</option>
+                        <option value="High-protein">High-protein</option>
+                        <option value="High-fiber">High-fiber</option>
+                        <option value="Low-fat">Low-fat</option>
+                        <option value="Low-carb">Low-carb</option>
+                        <option value="Low-sodium">Low-sodium</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <label for="servingInput">Serving Size</label>
+                    <select id="servingInput" name="servingInput">
+                        <option value="" disabled selected>Choose</option>
+                        <option value=""></option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <label for="cookingInput">Cooking Time</label>
+                    <select id="cookingInput" name="cookingInput">
+                        <option value="" disabled selected>Choose</option>
+                        <option value=""></option>
+                        <option value="15">15 minutes</option>
+                        <option value="30">30 minutes</option>
+                        <option value="45">45 minutes</option>
+                        <option value="60">60 minutes</option>
+                    </select>
+                </div>
+                <div class="col s12">
+                    <form action="slider">
+                        <p class="range-field">
+                            <label for="test5">Select Calorie Count</label>
+                            <input type="range" id="test5" start="0" min="100" max="10000" />
+                        </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Peanut Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Tree Nut Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Dairy Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Egg Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Shell Fish Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Wheat Free</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Soy Free</span>
+                        </label>
                     </p>
-            </div>
-            <div class="col s12">
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Peanut Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Tree Nut Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Dairy Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Egg Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Shell Fish Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Wheat Free</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Soy Free</span>
-                    </label>
-                </p>
-            </div>
-            <button class="search">Search</button>
+                </div>
+                <button data-target="modal1" class="search waves-effect waves-light btn-small modal-trigger">Search</button>
+            </form>
         </div>
-    </div>
-    <div id="resultsDiv" class="col s4">
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img class="foodImg1" src=""><label class="a" for="foodImg1"></label></a>
-            <a class="carousel-item" href="#two!"><img class="foodImg2" src=""><label class="b" for="foodImg2"></label></a>
-            <a class="carousel-item" href="#three!"><img class="foodImg3" src=""><label class="c" for="foodImg3"></label></a>
-            <a class="carousel-item" href="#four!"><img class="foodImg4" src=""><label class="d" for="foodImg4"></label></a>
-            <a class="carousel-item" href="#five!"><img class="foodImg5" src=""><label class="e" for="foodImg5"></label></a>
-
+        <div id="resultsDiv" class="col s4">
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img class="foodImg1" src=""><label class="a"
+                        for="foodImg1"></label></a>
+                <a class="carousel-item" href="#two!"><img class="foodImg2" src=""><label class="b"
+                        for="foodImg2"></label></a>
+                <a class="carousel-item" href="#three!"><img class="foodImg3" src=""><label class="c"
+                        for="foodImg3"></label></a>
+                <a class="carousel-item" href="#four!"><img class="foodImg4" src=""><label class="d"
+                        for="foodImg4"></label></a>
+                <a class="carousel-item" href="#five!"><img class="foodImg5" src=""><label class="e"
+                        for="foodImg5"></label></a>
+            </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/script.js"></script>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Missing Field</h4>
+                <p>Please Select a Protein</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="assets/script.js"></script>
 </body>
 
 </html>
