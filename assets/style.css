@@ -18,7 +18,7 @@ body{
     border-radius: 1%;
     height: 100vh;
     left: 0%;
-    /* opacity: 80%; */
+    opacity: 80%;
     position: absolute;
     padding: 1%;
     top: 0%;
@@ -44,6 +44,7 @@ position: absolute;
 left: 310%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 .tabBody  {
     background-color: aliceblue;
@@ -58,7 +59,7 @@ left: 310%;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 20;
     /* Sit on top */
     padding-top: 0px;
     padding-bottom: 0px;
@@ -109,7 +110,7 @@ left: 310%;
 .red, .blue, .green{
     background-color: aliceblue !important;
     overflow: hidden;
-=======
+
 .modal{
     width: 20%;
 }
@@ -127,5 +128,5 @@ left: 310%;
 
 #allergies3{
     margin-left: 1rem;
->>>>>>> 1f4d75bbffad14b4b41abadc2a2949639671c46b
+
 }
