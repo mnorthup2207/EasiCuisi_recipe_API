@@ -24,7 +24,7 @@ body{
     z-index: 10;
 }
 #resultsDiv{
-    left: 50%;
+    left: 40%;
     position: absolute;
     padding: 1%;
     top: 0%;
@@ -42,15 +42,21 @@ top: 125%;
 position: absolute;
 left: 310%;
 }
+.modal{
+    width: 20%;
+}
+.select-wrapper input.select-dropdown{
+    height: 2rem;
+}
 
 #allergies1{
-    margin-left: 40px;
+    margin-left: 2rem;
 }
 
 #allergies2{
-    margin-left: 50px;
+    margin-left: 2.7rem;
 }
 
 #allergies3{
-    margin-left: 20px;
+    margin-left: 1rem;
 }
