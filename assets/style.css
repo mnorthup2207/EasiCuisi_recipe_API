@@ -25,7 +25,7 @@ body{
     z-index: 10;
 }
 #resultsDiv{
-    left: 50%;
+    left: 40%;
     position: absolute;
     padding: 1%;
     top: 0%;
@@ -43,6 +43,7 @@ top: 125%;
 position: absolute;
 left: 310%;
 }
+<<<<<<< HEAD
 
 .tabBody  {
     background-color: aliceblue;
@@ -108,4 +109,23 @@ left: 310%;
 .red, .blue, .green{
     background-color: aliceblue !important;
     overflow: hidden;
+=======
+.modal{
+    width: 20%;
+}
+.select-wrapper input.select-dropdown{
+    height: 2rem;
+}
+
+#allergies1{
+    margin-left: 2rem;
+}
+
+#allergies2{
+    margin-left: 2.7rem;
+}
+
+#allergies3{
+    margin-left: 1rem;
+>>>>>>> 1f4d75bbffad14b4b41abadc2a2949639671c46b
 }
