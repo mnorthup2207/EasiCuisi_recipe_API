@@ -148,3 +148,11 @@ left: 310%;
     
 }
 
+.img2 {
+    right: 30px;
+    bottom: 15px;
+    z-index: 5;
+    position: absolute;
+    width: 250px;
+   
+}
