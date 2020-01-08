@@ -118,9 +118,6 @@ left: 310%;
 .red, .blue, .green{
     background-color:white !important;
     overflow: hidden;
-
-.modal{
-    width: 20%;
 }
 .select-wrapper input.select-dropdown{
     height: 2rem;

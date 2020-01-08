@@ -38,27 +38,6 @@
                     </select>
                 </div>
                 <div class="col s12">
-                    <label for="dietInput">Diet Type</label>
-                    <select id="dietInput" name="dietInput">
-                        <option value="" disabled selected>Choose</option>
-                        <option value=""></option>
-                        <option value="Dairy Free">Dairy Free</option>
-                        <option value="Egg Free">Egg Free</option>
-                        <option value="Fat Free">Fat Free</option>
-                        <option value="Fish Free">Fish Free</option>
-                        <option value="Gluten Free">Gluten Free</option>
-                        <option value="Low Sugar">Low Sugar</option>
-                        <option value="Paleo">Paleo</option>
-                        <option value="Peanut Free">Peanut Free</option>
-                        <option value="Shellfish Free">Shellfish Free</option>
-                        <option value="Soy Free">Soy Free</option>
-                        <option value="Tree Nut Free">Tree Nut Free</option>
-                        <option value="Vegan">Vegan</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Wheat Free">Wheat Free</option>
-                    </select>
-                </div>
-                <div class="col s12">
                     <label for="servingInput">Serving Size</label>
                     <select id="servingInput" name="servingInput">
                         <option value="" disabled selected>Choose</option>
@@ -90,14 +69,16 @@
                     <form action="slider">
                         <p class="range-field">
                             <label for="test5">Select Calorie Count</label>
-                            <input type="range" id="test5" start="0" min="0" max="2000" />
+                            <input type="range" id="test5" start="0" min="0" max="10000" />
                         </p>
                 </div>
-                
+
                 <!-- button icons need to be brought down to be level with search/clear being spelled out -->
-                <button data-target="modal1" class="search waves-effect waves-light btn-small modal-trigger">Search</button>
-                <button data-target="modal1" class="clear waves-effect waves-light btn-small modal-trigger"><i class="material-icons">clear</i></button>
-                
+                <button data-target="modal1"
+                    class="search waves-effect waves-light btn-small modal-trigger">Search</button>
+                <button data-target="modal1" class="clear waves-effect waves-light btn-small modal-trigger"><i
+                        class="material-icons">clear</i></button>
+
             </form>
         </div>
         <div id="resultsDiv" class="col s4">
@@ -127,47 +108,58 @@
                 <li class="tab col s3"><a href="#test-swipe-3" style="color: black;">Nutrition:</a></li>
             </ul>
             <div id="test-swipe-1" class="col s12 blue" class="tabBody">Ingredients: <br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae, impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo expedita optio in molestias alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae, impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo expedita optio in molestias alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae, impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo expedita optio in molestias alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae, impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo expedita optio in molestias alias.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae,
+                impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo
+                expedita optio in molestias alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                quia tempore enim repudiandae, impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa
+                blanditiis, accusamus soluta nemo expedita optio in molestias alias.Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Accusamus quia tempore enim repudiandae, impedit eveniet? Distinctio
+                laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo expedita optio in molestias
+                alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quia tempore enim repudiandae,
+                impedit eveniet? Distinctio laborum dolor repellendus, eveniet ipsa blanditiis, accusamus soluta nemo
+                expedita optio in molestias alias.<br>
                 <img src="http://lorempixel.com/400/200/" alt="variousPic">
             </div>
             <div id="test-swipe-2" class="col s12 red" class="tabBody">Preparations: <br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi numquam quaerat nemo. Voluptas itaque veritatis earum quibusdam perferendis, placeat magnam vel dolorem temporibus voluptatem quisquam debitis distinctio mollitia blanditiis magni?<br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi numquam quaerat nemo. Voluptas
+                itaque veritatis earum quibusdam perferendis, placeat magnam vel dolorem temporibus voluptatem quisquam
+                debitis distinctio mollitia blanditiis magni?<br>
                 <img src="http://lorempixel.com/400/200/" alt="variousPic"></div>
             <div id="test-swipe-3" class="col s12 green" class="tabBody">Nutrition: <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus fugiat voluptatem veniam sint unde nulla nemo, aliquam at obcaecati sit, laboriosam repellat, consequatur quaerat doloribus necessitatibus illum quasi! Molestiae.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus fugiat voluptatem veniam sint unde
+                nulla nemo, aliquam at obcaecati sit, laboriosam repellat, consequatur quaerat doloribus necessitatibus
+                illum quasi! Molestiae.<br>
                 <img src="http://lorempixel.com/400/200/" alt="variousPic">
             </div>
         </div>
 
     </div>
 
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Missing Field</h4>
+            <p>Please Select a Protein</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Missing Field</h4>
+            <p>Please Select a Protein</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/script.js"></script>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Missing Field</h4>
-                <p>Please Select a Protein</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-        </div>
-            </div>
-        </div>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Missing Field</h4>
-                <p>Please Select a Protein</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="assets/script.js"></script>
 </body>
 
 </html>
