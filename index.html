@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/style.css">
     <title>Document</title>
 </head>
@@ -119,7 +121,11 @@
                         </label>
                     </p>
                 </div>
-                <button data-target="modal1" class="search waves-effect waves-light btn-small modal-trigger">Search</button>
+                
+                <!-- button icons need to be brought down to be level with search/clear being spelled out -->
+                <button data-target="modal1" class="search waves-effect waves-light btn-small modal-trigger">Search<i class="material-icons">search</i></button>
+                <button data-target="modal1" class="search waves-effect waves-light btn-small modal-trigger"><i class="material-icons">clear</i></button>
+                
             </form>
         </div>
         <div id="resultsDiv" class="col s4">

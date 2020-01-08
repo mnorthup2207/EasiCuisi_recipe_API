@@ -55,3 +55,5 @@ $('.recipeInputs').on('submit', function (e) {
 
 });
 
+
+//on click for clear button
