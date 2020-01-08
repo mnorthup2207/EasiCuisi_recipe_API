@@ -138,3 +138,10 @@ left: 310%;
     color: lightslategrey
 }
 
+.img2 {
+    width: 200px;
+    margin-left: 400px;
+    z-index: 5;
+    position: absolute;
+   
+}
