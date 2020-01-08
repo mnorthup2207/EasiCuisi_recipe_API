@@ -43,8 +43,15 @@ top: 125%;
 position: absolute;
 left: 310%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+.clear{
+    width: 25%;
+    left: 15%;
+    top: 5%;
+}
+.search{
+    left: 15%;
+    top: 5%;
+}
 
 .tabBody  {
     background-color: aliceblue;
