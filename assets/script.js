@@ -66,7 +66,7 @@ var span = document.getElementsByClassName("close")[0];
 $("#resultsDiv").on("click", ".carousel-item label", function(event) {
     event.preventDefault();
     modal.style.display = "block"; 
-    $(".img1").css("opacity: 30%;");
+    // $(".img1").css("opacity: 30%;");
 });
 
 $("#myModal").on("click", ".close", function() {
