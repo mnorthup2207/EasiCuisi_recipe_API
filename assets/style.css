@@ -118,7 +118,7 @@ left: 310%;
 .red, .blue, .green{
     background-color:white !important;
     overflow: hidden;
-
+}
 .modal{
     width: 20%;
 }
@@ -151,3 +151,11 @@ left: 310%;
     
 }
 
+.img2 {
+    right: 30px;
+    bottom: 15px;
+    z-index: 5;
+    position: absolute;
+    width: 250px;
+   
+}
