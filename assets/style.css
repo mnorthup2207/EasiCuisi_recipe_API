@@ -65,8 +65,8 @@ left: 310%;
     padding-bottom: 0px;
     /* Location of the box */
     left: 0;
-    top: 0;
-    width: 100%;
+    top: 50px;
+    width: 95%;
     /* Full width */
     height: 100%;
     /* Full height */
@@ -76,16 +76,17 @@ left: 310%;
     /* Fallback color */
   opacity: 100%;
     /* Black w/ opacity */
-    top: 50px;
-    bottom: 50px;
+    top: 20px;
+    bottom: 20px;
+    max-height: 90%;
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color:lightslategray;
     margin: auto;
     padding: 0px;
-    border: 10px solid #888;
+    border: 5px solid #888;
     width: 100%;
     height: 100%;
     opacity: 100%;
@@ -108,7 +109,7 @@ left: 310%;
     cursor: pointer;
 }
 .red, .blue, .green{
-    background-color: aliceblue !important;
+    background-color:lightslategray !important;
     overflow: hidden;
 
 .modal{
@@ -129,4 +130,9 @@ left: 310%;
 #allergies3{
     margin-left: 1rem;
 
+}
+
+.label {
+    font-size: 1.1rem;
+    color: lightslategrey
 }
