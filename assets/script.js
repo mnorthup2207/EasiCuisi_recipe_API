@@ -66,10 +66,6 @@ $("#resultsDiv").on("click", ".carousel-item label", function(event) {
     modal.style.display = "block";
 });
 
-<<<<<<< HEAD
-
-//on click for clear button
-=======
 $("#myModal").on("click", ".close", function() {
     modal.style.display = "none";    
 });
@@ -101,4 +97,3 @@ $("#myModal").on("click", ".close", function() {
 // 4.
 
 
->>>>>>> cc3c8a4943ed4fc12dd9adf576117501954e1770
