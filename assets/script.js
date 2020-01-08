@@ -3,6 +3,12 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
+$(document).ready(function(){
+    $('.tabs').tabs();
+  });
+
+
+
 
 // event listener for search bar
 $('.recipeInputs').on('submit', function (e) {
@@ -66,7 +72,8 @@ var span = document.getElementsByClassName("close")[0];
 
 $("#resultsDiv").on("click", ".carousel-item label", function(event) {
     event.preventDefault();
-    modal.style.display = "block";
+    modal.style.display = "block"; 
+    $(".img1").css("opacity: 30%;");
 });
 
 $("#myModal").on("click", ".close", function() {
@@ -87,11 +94,11 @@ $("#myModal").on("click", ".close", function() {
 // }
 
 // // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 // 1. protein selected
 // 2. click of search loads carousel and populates with protein

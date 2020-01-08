@@ -90,7 +90,7 @@ left: 310%;
 
 /* Modal Content */
 .modal-content {
-    background-color:lightslategray;
+    background-color:white;
     margin: auto;
     padding: 0px;
     border: 5px solid #888;
@@ -116,7 +116,7 @@ left: 310%;
     cursor: pointer;
 }
 .red, .blue, .green{
-    background-color:lightslategray !important;
+    background-color:white !important;
     overflow: hidden;
 
 .modal{
@@ -142,6 +142,12 @@ left: 310%;
 
 .label {
     font-size: 1.1rem;
-    color: lightslategrey
+    color: lightslategrey !important
+}
+
+.tabs {
+    width: 30%;
+    font-size: large;
+    
 }
 
