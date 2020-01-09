@@ -35,9 +35,7 @@ $('.recipeInputs').on('submit', function (e) {
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
         if (range) filteredRecipes = filteredRecipes.filter(item => item.recipe.calories <= range)
-        // for (var i = 0; i > filteredRecipes.length; i++) {
-        //     $('#carousel').html($(`'<a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg1" src="${filteredRecipes[i].recipe.image}"><label for="foodImg1">${filteredRecipes[i].recipe.label}</label></a>'`))
-        // }
+
 
         $('.foodImg1').attr('src', filteredRecipes[0].recipe.image)
         $('.a').html(filteredRecipes[0].recipe.label)
@@ -86,12 +84,21 @@ $('.carousel').on('click', '#carouselLabel', function (e) {
     $('#nutDiv').append(`<ol class="nutList"></ol>`);
     $('#nutContainer').append($('<div class="col s3" id="addDiv">'));
     $('#addDiv').append(`<h5>Nutrition Info</h5>`);
-    $('#addDiv').append(`<ol class="addList"></ol>`);
-    $(".addList").append($(`<li>Calories: ${filteredRecipes[0].recipe.calories}</li>`));
-    $(".addList").append($(`<li>Fat: ${filteredRecipes[0].recipe.totalNutrients.FAT.quantity}</li>`));
-    $(".addList").append($(`<li>Protein: ${filteredRecipes[0].recipe.totalNutrients.PROCNT.quantity}</li>`));
+    $('#addDiv').append(`<ul class="addList"></ul>`);
+    $(".addList").append($(`<li>Calories: ${filteredRecipes[0].recipe.calories.toFixed(1)}</li>`));
+    $(".addList").append($(`<li>Protein: ${filteredRecipes[0].recipe.totalNutrients.PROCNT.quantity.toFixed(1)} g</li>`));
+    $(".addList").append($(`<li>Fat: ${filteredRecipes[0].recipe.totalNutrients.FAT.quantity.toFixed(1)} g</li>`));
+    $(".addList").append($(`<li>Sat.Fat: ${filteredRecipes[0].recipe.totalNutrients.FASAT.quantity.toFixed(1)} g</li>`));
+    $(".addList").append($(`<li>Sugar: ${filteredRecipes[0].recipe.totalNutrients.SUGAR.quantity.toFixed(1)} g</li>`));
+    $(".addList").append($(`<li>Sodium: ${filteredRecipes[0].recipe.totalNutrients.NA.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Cholesterol: ${filteredRecipes[0].recipe.totalNutrients.CHOLE.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Calcium: ${filteredRecipes[0].recipe.totalNutrients.CA.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Magnesium: ${filteredRecipes[0].recipe.totalNutrients.MG.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Potassium: ${filteredRecipes[0].recipe.totalNutrients.K.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Iron: ${filteredRecipes[0].recipe.totalNutrients.FE.quantity.toFixed(1)} mg</li>`));
+    $(".addList").append($(`<li>Zinc: ${filteredRecipes[0].recipe.totalNutrients.ZN.quantity.toFixed()} mg</li>`));
 
-    
+
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
     }
@@ -102,18 +109,6 @@ $('.carousel').on('click', '#carouselLabel', function (e) {
         $(".nutList").append($(`<li>${filteredRecipes[0].recipe.dietLabels[i]}</li>`));
     }
     
-//     // Youtube AJAX call
-
-    // var apiKey= "AIzaSyDMmyOhjFC6CqZcp1HjnKUmvH60744BBik";
-    // queryURL2= `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${userSearchTerm}&key=${apiKey}`;
-    // console.log(queryURL2);
-    
-    // $.ajax({
-    // url: queryURL2,
-    // method: 'GET'
-    // }).then(function(response){
-    //     console.log(response)
-    // })
 })
 
 
