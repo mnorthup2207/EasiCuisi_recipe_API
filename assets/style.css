@@ -194,3 +194,16 @@ left: 310%;
 .select-wrapper input.select-dropdown {
     height: 4rem;
 }
+
+.btnURL{
+    margin-left: 6%;
+    width: 10%;
+    background-color: peru;
+    color: white;
+}
+.pdiv{
+    width: 25%;
+}
+.youtubeP{
+    width: 25%;
+}
