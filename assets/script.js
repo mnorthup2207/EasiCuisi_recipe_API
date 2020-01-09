@@ -80,12 +80,21 @@ $('#carouselLabel').on('click', function (e) {
     $('#nutDiv').append(`<ol class="nutList"></ol>`);
     $('#nutContainer').append($('<div class="col s3" id="addDiv">'));
     $('#addDiv').append(`<h5>Nutrition Info</h5>`);
-    $('#addDiv').append(`<ol class="addList"></ol>`);
+    $('#addDiv').append(`<ul class="addList"></ul>`);
     $(".addList").append($(`<li>Calories: ${filteredRecipes[0].recipe.calories}</li>`));
-    $(".addList").append($(`<li>Fat: ${filteredRecipes[0].recipe.totalNutrients.FAT.quantity}</li>`));
-    $(".addList").append($(`<li>Protein: ${filteredRecipes[0].recipe.totalNutrients.PROCNT.quantity}</li>`));
+    $(".addList").append($(`<li>Protein: ${filteredRecipes[0].recipe.totalNutrients.PROCNT.quantity} g</li>`));
+    $(".addList").append($(`<li>Fat: ${filteredRecipes[0].recipe.totalNutrients.FAT.quantity} g</li>`));
+    $(".addList").append($(`<li>Sat.Fat: ${filteredRecipes[0].recipe.totalNutrients.FASAT.quantity} g</li>`));
+    $(".addList").append($(`<li>Sugar: ${filteredRecipes[0].recipe.totalNutrients.SUGAR.quantity} g</li>`));
+    $(".addList").append($(`<li>Sodium: ${filteredRecipes[0].recipe.totalNutrients.NA.quantity} mg</li>`));
+    $(".addList").append($(`<li>Cholesterol: ${filteredRecipes[0].recipe.totalNutrients.CHOLE.quantity} mg</li>`));
+    $(".addList").append($(`<li>Calcium: ${filteredRecipes[0].recipe.totalNutrients.CA.quantity} mg</li>`));
+    $(".addList").append($(`<li>Magnesium: ${filteredRecipes[0].recipe.totalNutrients.MG.quantity} mg</li>`));
+    $(".addList").append($(`<li>Potassium: ${filteredRecipes[0].recipe.totalNutrients.K.quantity} mg</li>`));
+    $(".addList").append($(`<li>Iron: ${filteredRecipes[0].recipe.totalNutrients.FE.quantity} mg</li>`));
+    $(".addList").append($(`<li>Zinc: ${filteredRecipes[0].recipe.totalNutrients.ZN.quantity} mg</li>`));
 
-    
+
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
     }
