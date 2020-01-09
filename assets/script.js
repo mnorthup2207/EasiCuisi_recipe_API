@@ -6,10 +6,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.tabs').tabs();
 });
-
-
-
-
+var filteredRecipes;
+var filteredRecipe;
 // event listener for search bar
 $('.recipeInputs').on('submit', function (e) {
     e.preventDefault();
@@ -20,6 +18,7 @@ $('.recipeInputs').on('submit', function (e) {
     var serving = $('#servingInput').val();
     var cooking = $('#cookingInput').val();
     var range = $('#test5').val();
+    var iHead = $('.ingredientsHead');
 
     // AJAX call from 
     var appKEY = "14ea6a2a8ec5df04798b53f1975f47fb";
@@ -29,12 +28,16 @@ $('.recipeInputs').on('submit', function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-
-        var filteredRecipes = response.hits;
+        // console.log(response)
+        filteredRecipes = response.hits;
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
         if (range) filteredRecipes = filteredRecipes.filter(item => item.recipe.calories <= range)
         console.log(filteredRecipes);
+
+        // for (var i = 0; i > filteredRecipes.length; i++) {
+        //     $('#carousel').html($(`'<a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg1" src="${filteredRecipes[i].recipe.image}"><label for="foodImg1">${filteredRecipes[i].recipe.label}</label></a>'`))
+        // }
 
         $('.foodImg1').attr('src', filteredRecipes[0].recipe.image)
         $('.a').html(filteredRecipes[0].recipe.label)
@@ -47,22 +50,44 @@ $('.recipeInputs').on('submit', function (e) {
         $('.foodImg5').attr('src', filteredRecipes[4].recipe.image)
         $('.e').html(filteredRecipes[4].recipe.label)
         $('.carousel').carousel();
+
+
     });
 })
-var modal = document.getElementById("myModal");
+$('#carouselLabel').on('click', function (e) {
+    e.preventDefault();
+    console.log(filteredRecipes)
+    var carouselSelect = $(this).html();
+    filteredRecipe = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
+    console.log(filteredRecipes)
+    $('.ingredientsHead').html($(this).html());
+    $('#test-swipe-2').html($('<div class="prepDiv">'));
+    $('.prepDiv').append($(`<h5>${carouselSelect}</h5>`));
 
+
+
+    for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
+        //updated thios.html
+        $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
+    }
+
+    //  $('.swipe2').attr('href', filteredRecipes[0].recipe.url)
+})
+
+
+
+var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
-    $(".img1").css("opacity", ".6%");
+   
+    
 });
-
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
 });
