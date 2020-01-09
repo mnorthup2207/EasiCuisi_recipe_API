@@ -64,6 +64,8 @@ $('#carouselLabel').on('click', function (e) {
     $('#test-swipe-1').html($('<div class="ingredDiv">'));
     $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
     $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
+    $('.ingredDiv').append(`<link rel="stylesheet" href="print.css" type="text/css" media="print">
+    <a href="#" id="print-button" onclick="window.print();return false;">Print this page</a>`)
     $('#test-swipe-2').html($('<div id="prepDiv" class="row">'));
     $('#prepDiv').append($(`<p>Use the listed ingredients and follow along to make this version of ${carouselSelect} </p>`))
     var urlButton = $(`<button><a class="urlBtn" target="_blank" href="${filteredRecipes[0].recipe.url}">GO</a></button>`);
