@@ -60,14 +60,14 @@ $('#carouselLabel').on('click', function (e) {
     var carouselSelect = $(this).html();
     filteredRecipe = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
     console.log(filteredRecipes)
-    $('.ingredientsHead').html($(this).html());
+    // $('.ingredientsHead').html($(this).html());
+    $('#test-swipe-1').html($('<div class="ingredDiv">'));
+    $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
+    $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
     $('#test-swipe-2').html($('<div class="prepDiv">'));
     $('.prepDiv').append($(`<h5>${carouselSelect}</h5>`));
 
-
-
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
-        //updated thios.html
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
     }
 
@@ -85,7 +85,6 @@ var span = document.getElementsByClassName("close")[0];
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
-    $(".img1").css("opacity", ".6%");
 });
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
