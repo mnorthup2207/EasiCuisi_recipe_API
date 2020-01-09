@@ -28,7 +28,7 @@ $('.recipeInputs').on('submit', function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        // console.log(response)
+        console.log(response)
         filteredRecipes = response.hits;
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
@@ -64,14 +64,17 @@ $('#carouselLabel').on('click', function (e) {
     $('#test-swipe-1').html($('<div class="ingredDiv">'));
     $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
     $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
-    $('#test-swipe-2').html($('<div class="prepDiv">'));
-    $('.prepDiv').append($(`<h5>${carouselSelect}</h5>`));
-
+    $('#test-swipe-2').html($('<div id="prepDiv" class="row">'));
+    $('#prepDiv').append($(`<p>Use the listed ingredients and follow along to make this version of ${carouselSelect} </p>`))
+    var urlButton = $(`<button><a class="urlBtn" target="_blank" href="${filteredRecipes[0].recipe.url}">GO</a></button>`);
+    // $('urlBtn').attr('href', filteredRecipes[0].recipe.url)
+    $('#prepDiv').append(urlButton);
+    $('#prepDiv').append($('<p class="youtubP">Or follow along on a similar YouTube Recipe</p>'))
+    
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
     }
 
-    //  $('.swipe2').attr('href', filteredRecipes[0].recipe.url)
 })
 
 
