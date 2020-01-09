@@ -7,9 +7,6 @@ $(document).ready(function () {
     $('.tabs').tabs();
 });
 
-
-
-
 // event listener for search bar
 $('.recipeInputs').on('submit', function (e) {
     e.preventDefault();
@@ -18,6 +15,7 @@ $('.recipeInputs').on('submit', function (e) {
     var serving = $('#servingInput').val();
     var cooking = $('#cookingInput').val();
     var range = $('#test5').val();
+    var iHead = $('.ingredientsHead');
 
     // AJAX call from 
     var appKEY = "14ea6a2a8ec5df04798b53f1975f47fb";
@@ -32,8 +30,12 @@ $('.recipeInputs').on('submit', function (e) {
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
         if (range) filteredRecipes = filteredRecipes.filter(item => item.recipe.calories <= range)
-        console.log(filteredRecipes);
-
+        // console.log(filteredRecipes);
+        
+        // for (var i = 0; i > filteredRecipes.length; i++) {
+        //     $('#carousel').html($(`'<a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg1" src="${filteredRecipes[i].recipe.image}"><label for="foodImg1">${filteredRecipes[i].recipe.label}</label></a>'`))
+        // }
+        
         $('.foodImg1').attr('src', filteredRecipes[0].recipe.image)
         $('.a').html(filteredRecipes[0].recipe.label)
         $('.foodImg2').attr('src', filteredRecipes[1].recipe.image)
@@ -45,22 +47,33 @@ $('.recipeInputs').on('submit', function (e) {
         $('.foodImg5').attr('src', filteredRecipes[4].recipe.image)
         $('.e').html(filteredRecipes[4].recipe.label)
         $('.carousel').carousel();
+
+        $('#carouselLabel').on('click', function(e){
+            e.preventDefault();
+             var carouselSelect = $(this).html();
+             filteredRecipes = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
+            //  console.dir(filteredRecipes[0].recipe.ingredientLines)
+             $('.ingredientsHead').html($(this).html());
+             for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++){
+                $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
+             }
+        })
+        
     });
 })
-var modal = document.getElementById("myModal");
 
+// var selectedRecipe = 0;
+
+var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
-    $(".img1").css("opacity: 30%;");
 });
-
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
 });
