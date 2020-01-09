@@ -28,7 +28,7 @@ $('.recipeInputs').on('submit', function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        // console.log(response)
+        console.log(response)
         filteredRecipes = response.hits;
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
@@ -60,18 +60,33 @@ $('#carouselLabel').on('click', function (e) {
     var carouselSelect = $(this).html();
     filteredRecipe = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
     console.log(filteredRecipes)
-    $('.ingredientsHead').html($(this).html());
-    $('#test-swipe-2').html($('<div class="prepDiv">'));
-    $('.prepDiv').append($(`<h5>${carouselSelect}</h5>`));
-
-
-
+    // $('.ingredientsHead').html($(this).html());
+    $('#test-swipe-1').html($('<div class="ingredDiv">'));
+    $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
+    $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
+    $('#test-swipe-2').html($('<div id="prepDiv" class="row">'));
+    $('#prepDiv').append($(`<p>Use the listed ingredients and follow along to make this version of ${carouselSelect} </p>`))
+    var urlButton = $(`<button><a class="urlBtn" target="_blank" href="${filteredRecipes[0].recipe.url}">GO</a></button>`);
+    $('#prepDiv').append(urlButton);
+    $('#prepDiv').append($('<p class="youtubP">Or follow along on a similar YouTube Recipe</p>'))
+    $('#test-swipe-3').html($('<div class="row" id="nutContainer">'));
+    $('#nutContainer').append($('<div class="col s3" id="healthDiv">'));
+    $('#healthDiv').append(`<h5>Dietary Info</h5>`);
+    $('#healthDiv').append(`<ol class="dietaryList"></ol>`);
+    $('#nutContainer').append($('<div class="col s3" id="nutDiv">'));
+    $('#nutDiv').append(`<h5>Dietary Type</h5>`);
+    $('#nutDiv').append(`<ol class="nutList"></ol>`);
+    
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
-        //updated thios.html
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
     }
-
-    //  $('.swipe2').attr('href', filteredRecipes[0].recipe.url)
+    for (var i = 0; i < filteredRecipes[0].recipe.healthLabels.length; i++) {
+        $(".dietaryList").append($(`<li>${filteredRecipes[0].recipe.healthLabels[i]}</li>`));
+    }
+    for (var i = 0; i < filteredRecipes[0].recipe.dietLabels.length; i++) {
+        $(".nutList").append($(`<li>${filteredRecipes[0].recipe.dietLabels[i]}</li>`));
+    }
+    
 })
 
 
@@ -85,8 +100,7 @@ var span = document.getElementsByClassName("close")[0];
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
-   
-    
+
 });
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
