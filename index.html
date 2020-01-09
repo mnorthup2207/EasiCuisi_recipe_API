@@ -15,7 +15,7 @@
 <body>
     <img class="img1" src="assets/img/landing.jpg" alt="CookBook img by">
     <div class="row">
-        <div id="formDiv" class="col s3">
+        <div id="formDiv" class="col s3" style="background-color: rgb(110,98,89); border-radius: 0px;">
             <form class="recipeInputs" name="recipeInputs" action="submit">
                 <div class="col s12">
                     <label for="proteinInput">Protein Type *</label>
@@ -83,16 +83,16 @@
         </div>
         <div id="resultsDiv" class="col s4">
             <div class="carousel">
-                <a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg1" src=""><label id="carouselLabel" class="a"
-                        for="foodImg1"></label></a>
-                <a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg2" src=""><label id="carouselLabel" class="b"
-                        for="foodImg2"></label></a>
-                <a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg3" src=""><label id="carouselLabel" class="c"
-                        for="foodImg3"></label></a>
-                <a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg4" src=""><label id="carouselLabel" class="d"
-                        for="foodImg4"></label></a>
-                <a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg5" src=""><label id="carouselLabel" class="e"
-                        for="foodImg5"></label></a>
+                <a class="carousel-item" href="#modal1" id="myBtn" ><img class="foodImg1" src=""  ><label id="carouselLabel" class="a"
+                        for="foodImg1" style="color:rgb(121, 78, 22); font-weight: bold;font-size: medium;"></label></a>
+                <a class="carousel-item" href="#modal1" id="myBtn" ><img class="foodImg2" src="" ><label id="carouselLabel" class="b"
+                        for="foodImg2" style="color: rgb(121, 78, 22); font-weight: bold; font-size: medium;"></label></a>
+                <a class="carousel-item" href="#modal1" id="myBtn" ><img class="foodImg3" src="" ><label id="carouselLabel" class="c"
+                        for="foodImg3" style="color: rgb(121, 78, 22); font-weight: bold;font-size: medium;" ></label></a>
+                <a class="carousel-item" href="#modal1" id="myBtn" ><img class="foodImg4" src="" ><label id="carouselLabel" class="d"
+                        for="foodImg4" style="color: rgb(121, 78, 22); font-weight: bold;font-size: medium;" ></label></a>
+                <a class="carousel-item" href="#modal1" id="myBtn" ><img class="foodImg5" src="" ><label id="carouselLabel" class="e"
+                        for="foodImg5" style="color: rgb(121, 78, 22); font-weight: bold; font-size: medium;" ></label></a>
             </div>
         </div>
     </div>
@@ -101,10 +101,9 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <ul id="tabs-swipe-demo" class="tabs">
-                <li class="tab col s3"><a href="#test-swipe-1" style="color: black;">Ingredients:</a></li>
-                <li class="tab col s3"><a class="active" href="#test-swipe-2" style="color: black;">Preparation:</a>
-                </li>
-                <li class="tab col s3"><a href="#test-swipe-3" style="color: black;">Nutrition:</a></li>
+                <li class="tab col s3"><a href="#test-swipe-2" class="tabBtn" >Ingredients:</a></li>
+                <li class="tab col s3"><a href="#test-swipe-1" class="tabBtn">Preparation:</a></li>
+                <li class="tab col s3"><a href="#test-swipe-3" class="tabBtn">Nutrition:</a></li>
             </ul>
             <div id="test-swipe-1" class="col s12 blue" class="tabBody">
                 <h5 class="ingredientsHead"></h5>
@@ -112,15 +111,21 @@
         
                 </ol>
             </div>
-            <div id="test-swipe-2" class="col s12 red" class="tabBody">Preparations: <br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi numquam quaerat nemo. Voluptas
-                itaque veritatis earum quibusdam perferendis, placeat magnam vel dolorem temporibus voluptatem quisquam
-                debitis distinctio mollitia blanditiis magni?<br>
-                <img src="http://lorempixel.com/400/200/" alt="variousPic"></div>
-            <div id="test-swipe-3" class="col s12 green" class="tabBody">Nutrition: <br>
+            <div id="test-swipe-2" class="col s12 red" class="tabBody"><br>Preparations:<br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus fugiat voluptatem veniam sint unde
                 nulla nemo, aliquam at obcaecati sit, laboriosam repellat, consequatur quaerat doloribus necessitatibus
                 illum quasi! Molestiae.<br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestias, delectus, aliquid, et consequatur veritatis laboriosam tempore dicta ex consequuntur ipsam cumque. Perspiciatis similique, praesentium saepe sint nostrum vel id.</p>
+                <p>Repudiandae illum officia, distinctio maiores quia, rem nulla numquam, earum dolor quod vitae optio velit. Cumque repudiandae molestias vel cum, doloribus, aut delectus quibusdam ad dolorem temporibus ducimus fugit dolor?</p>
+                <p>Ipsam corrupti consectetur iure laborum laudantium eveniet ratione officiis nemo fuga doloribus voluptatibus alias, sed qui possimus obcaecati neque quidem odio recusandae? Cum deleniti magnam eius incidunt corrupti libero dolore.</p>
+                <img src="http://lorempixel.com/400/200/" alt="variousPic"></div>
+            <div id="test-swipe-3" class="col s12 green" class="tabBody"><br>Nutrition: <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus fugiat voluptatem veniam sint unde
+                nulla nemo, aliquam at obcaecati sit, laboriosam repellat, consequatur quaerat doloribus necessitatibus
+                illum quasi! Molestiae.<br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestias, delectus, aliquid, et consequatur veritatis laboriosam tempore dicta ex consequuntur ipsam cumque. Perspiciatis similique, praesentium saepe sint nostrum vel id.</p>
+                <p>Repudiandae illum officia, distinctio maiores quia, rem nulla numquam, earum dolor quod vitae optio velit. Cumque repudiandae molestias vel cum, doloribus, aut delectus quibusdam ad dolorem temporibus ducimus fugit dolor?</p>
+                <p>Ipsam corrupti consectetur iure laborum laudantium eveniet ratione officiis nemo fuga doloribus voluptatibus alias, sed qui possimus obcaecati neque quidem odio recusandae? Cum deleniti magnam eius incidunt corrupti libero dolore.</p>
                 <img src="http://lorempixel.com/400/200/" alt="variousPic">
             </div>
         </div>

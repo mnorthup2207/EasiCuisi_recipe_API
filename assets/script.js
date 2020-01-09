@@ -10,6 +10,8 @@ $(document).ready(function () {
 // event listener for search bar
 $('.recipeInputs').on('submit', function (e) {
     e.preventDefault();
+
+    $(".img1").css("opacity", ".45");
     // variables for selectors
     var protein = $('#proteinInput').val();
     var serving = $('#servingInput').val();
@@ -73,6 +75,7 @@ var span = document.getElementsByClassName("close")[0];
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
+    $(".img1").css("opacity", ".6%");
 });
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
