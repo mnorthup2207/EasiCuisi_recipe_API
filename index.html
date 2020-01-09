@@ -75,9 +75,8 @@
 
                 <!-- button icons need to be brought down to be level with search/clear being spelled out -->
                 <button data-target="modal1"
-                    class="search waves-effect waves-light btn-small modal-trigger">Search</button>
-                <button data-target="modal1" class="clear waves-effect waves-light btn-small modal-trigger"><i
-                        class="material-icons">clear</i></button>
+                    class="search waves-effect waves-light btn-small modal-trigger" id="searchbtn">Search</button>
+              
 
             </form>
         </div>
@@ -110,11 +109,11 @@
                 <li class="tab col s3"><a href="#test-swipe-2" class="tabBtn">Preparation:</a></li>
                 <li class="tab col s3"><a href="#test-swipe-3" class="tabBtn">Nutrition:</a></li>
             </ul>
-  
             <div id="test-swipe-1" class="col s12 blue" class="tabBody">
                 <h5 class="ingredientsHead"></h5>
                 <ol class="ingredientList">
-
+                    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+                    <a href="#" id="print-button" onclick="window.print();return false;">Print this page</a>
                 </ol>
             </div>
             <div id="test-swipe-2" class="col s12 red" class="tabBody">
@@ -123,7 +122,6 @@
                 
 
             </div>
-
             <div id="test-swipe-3" class="col s12 green" class="tabBody"><br>Nutrition: <br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus fugiat voluptatem veniam sint unde
                 nulla nemo, aliquam at obcaecati sit, laboriosam repellat, consequatur quaerat doloribus necessitatibus
@@ -147,7 +145,7 @@
 
     </div>
    
-    <a href="index.html" class="img2"><img src="assets/img/logo.png" width=100% alt="EasiCuisi" ></a>
+    <a href="index.html" class="img2"><img src="assets/img/logo2.png" width=100% alt="EasiCuisi" ></a>
 
    
 
