@@ -119,9 +119,6 @@ left: 310%;
     background-color:white !important;
     overflow: hidden;
 }
-.modal{
-    width: 20%;
-}
 .select-wrapper input.select-dropdown{
     height: 2rem;
 }
