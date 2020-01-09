@@ -1,6 +1,6 @@
 # Project-1
 
-## EasiQuisi
+## EasiCuisi
 Kate Hoth, McCabe Northup, Ben Abbott
 
 ## Applications Used
