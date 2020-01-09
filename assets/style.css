@@ -9,6 +9,9 @@ body{
     width: 100%;
     z-index: 0;
 }
+#prepDiv{
+    margin-left: 2%;
+}
 
 .carousel{
     overflow: visible;
