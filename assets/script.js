@@ -63,7 +63,7 @@ $('#carouselLabel').on('click', function (e) {
     // $('.ingredientsHead').html($(this).html());
     $('#test-swipe-1').html($('<div class="ingredDiv">'));
     $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
-    $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
+    $('.ingredDiv').append(`<ol class="ingredientList"></ol>`);
     $('#test-swipe-2').html($('<div id="prepDiv" class="row">'));
     $('#prepDiv').append($(`<p>Use the listed ingredients and follow along to make this version of ${carouselSelect} </p>`))
     var urlButton = $(`<button><a class="urlBtn" target="_blank" href="${filteredRecipes[0].recipe.url}">GO</a></button>`);
@@ -76,6 +76,13 @@ $('#carouselLabel').on('click', function (e) {
     $('#nutContainer').append($('<div class="col s3" id="nutDiv">'));
     $('#nutDiv').append(`<h5>Dietary Type</h5>`);
     $('#nutDiv').append(`<ol class="nutList"></ol>`);
+    $('#nutContainer').append($('<div class="col s3" id="addDiv">'));
+    $('#addDiv').append(`<h5>Nutrition Info</h5>`);
+    $('#addDiv').append(`<ol class="addList"></ol>`);
+    $(".addList").append($(`<li>Calories: ${filteredRecipes[0].recipe.calories}</li>`));
+    $(".addList").append($(`<li>Fat: ${filteredRecipes[0].recipe.totalNutrients.FAT.quantity}</li>`));
+    // $(".addList").append($(`<li>Protein: ${filteredRecipes[0].recipe.totalNutrients.PROCNT.quantity}</li>`));
+
     
     for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
         $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
