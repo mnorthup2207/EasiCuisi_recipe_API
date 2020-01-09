@@ -6,7 +6,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.tabs').tabs();
 });
-
+var filteredRecipes;
+var filteredRecipe;
 // event listener for search bar
 $('.recipeInputs').on('submit', function (e) {
     e.preventDefault();
@@ -27,17 +28,17 @@ $('.recipeInputs').on('submit', function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-
-        var filteredRecipes = response.hits;
+        // console.log(response)
+        filteredRecipes = response.hits;
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
         if (range) filteredRecipes = filteredRecipes.filter(item => item.recipe.calories <= range)
-        // console.log(filteredRecipes);
-        
+        console.log(filteredRecipes);
+
         // for (var i = 0; i > filteredRecipes.length; i++) {
         //     $('#carousel').html($(`'<a class="carousel-item" href="#modal1" id="myBtn"><img class="foodImg1" src="${filteredRecipes[i].recipe.image}"><label for="foodImg1">${filteredRecipes[i].recipe.label}</label></a>'`))
         // }
-        
+
         $('.foodImg1').attr('src', filteredRecipes[0].recipe.image)
         $('.a').html(filteredRecipes[0].recipe.label)
         $('.foodImg2').attr('src', filteredRecipes[1].recipe.image)
@@ -50,21 +51,30 @@ $('.recipeInputs').on('submit', function (e) {
         $('.e').html(filteredRecipes[4].recipe.label)
         $('.carousel').carousel();
 
-        $('#carouselLabel').on('click', function(e){
-            e.preventDefault();
-             var carouselSelect = $(this).html();
-             filteredRecipes = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
-            //  console.dir(filteredRecipes[0].recipe.ingredientLines)
-             $('.ingredientsHead').html($(this).html());
-             for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++){
-                $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
-             }
-        })
-        
+
     });
 })
+$('#carouselLabel').on('click', function (e) {
+    e.preventDefault();
+    console.log(filteredRecipes)
+    var carouselSelect = $(this).html();
+    filteredRecipe = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
+    console.log(filteredRecipes)
+    $('.ingredientsHead').html($(this).html());
+    $('#test-swipe-2').html($('<div class="prepDiv">'));
+    $('.prepDiv').append($(`<h5>${carouselSelect}</h5>`));
 
-// var selectedRecipe = 0;
+
+
+    for (var i = 0; i < filteredRecipes[0].recipe.ingredientLines.length; i++) {
+        //updated thios.html
+        $(".ingredientList").append($(`<li>${filteredRecipes[0].recipe.ingredientLines[i]}</li>`));
+    }
+
+    //  $('.swipe2').attr('href', filteredRecipes[0].recipe.url)
+})
+
+
 
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
