@@ -175,3 +175,14 @@ left: 310%;
     border-radius: 10px 10px 0px 0px !important;
 }
 
+#searchbtn {
+    left: 11rem;
+    top: 13rem;
+    background-color: peru;
+}
+
+
+
+.select-wrapper input.select-dropdown {
+    height: 4rem;
+}
