@@ -32,8 +32,19 @@ body{
     left: 40%;
     position: absolute;
     padding: 1%;
-    top: 0%;
+    top: -5%;
     z-index: 10;
+}
+
+.k {
+    color:rgb(121, 78, 22); 
+    font-weight: bold;
+    font-size: medium;
+}
+.k:hover {
+   color: white;
+   cursor: pointer;
+   font-size: large; 
 }
 .range-field{
     margin: 15% 0% 0% 0%;
@@ -154,10 +165,7 @@ left: 310%;
 }
 
 
-.d {
-    color:black !important;
-    font-size: 1.1rem !important;
-}
+
 
 .img2 {
     right: 30px;

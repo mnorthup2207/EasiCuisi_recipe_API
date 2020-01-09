@@ -100,6 +100,7 @@ var span = document.getElementsByClassName("close")[0];
 $("#resultsDiv").on("click", ".carousel-item label", function (event) {
     event.preventDefault();
     modal.style.display = "block";
+
 });
 $("#myModal").on("click", ".close", function () {
     modal.style.display = "none";
