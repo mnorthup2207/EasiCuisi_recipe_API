@@ -21,10 +21,15 @@ $('.recipeInputs').on('submit', function (e) {
     var iHead = $('.ingredientsHead');
 
     // AJAX call from 
-    var appKEY = "14ea6a2a8ec5df04798b53f1975f47fb";
-    // var appKEY = "20c2becc63aa2eb7bc93f89fc9d908";
-    var apiID = "0a8d88d0";
-    // var apiID = "7b987b1b";
+    //mccabe key
+    // var appKEY = "14ea6a2a8ec5df04798b53f1975f47fb";
+    // ben key
+    var appKEY = "fe36f64c5f90677aea3f7c92e3406936";
+    // mccabe id
+    // var apiID = "0a8d88d0";
+    // ben id
+    var apiID = "ec9c4f3e";
+    
     queryURL = `https://api.edamam.com/search?q=${protein}&app_id=${apiID}&app_key=${appKEY}&from=0&to=100&time=1%2B`
     $.ajax({
         url: queryURL,
