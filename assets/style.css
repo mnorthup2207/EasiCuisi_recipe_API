@@ -88,7 +88,7 @@ left: 310%;
     /* Location of the box */
     left: 0;
     top: 50px;
-    width: 95%;
+    width: 60%;
     /* Full width */
     height: 100%;
     /* Full height */
@@ -101,6 +101,7 @@ left: 310%;
     top: 20px;
     bottom: 20px;
     max-height: 90%;
+    
 }
 
 /* Modal Content */
@@ -196,14 +197,19 @@ left: 310%;
 }
 
 .btnURL{
-    margin-left: 6%;
+    margin-left: 40%;
     width: 10%;
     background-color: peru;
     color: white;
 }
+.btnURL:hover{
+    background-color: peru;
+    color: black;
+}
 .pdiv{
-    width: 25%;
+    width: 90%;
+    margin-left: 5%;
 }
 .youtubeP{
-    width: 25%;
+    width: 50%;
 }
