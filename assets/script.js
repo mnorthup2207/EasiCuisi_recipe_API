@@ -72,7 +72,7 @@ $('.carousel').on('click', '#carouselLabel', function (e) {
     var urlButton = $(`<button class="btnURL waves-effect waves-light btn-small modal-trigger">GO</button>`);
     $('#prepDiv').append(urlButton);
     $('#prepDiv').append($('<p class="youtubeP">Or follow along on a similar YouTube Recipe</p>'))
-    // yoututbe call
+    // youtube call
     var userSearchTerm = filteredRecipe[0].recipe.label;
     userSearchTerm = userSearchTerm.split(" ").join("+")
     var urlVid = `https://www.youtube.com/embed?listType=search&list=${userSearchTerm}`
