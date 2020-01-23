@@ -20,4 +20,4 @@ Kate Hoth, McCabe Northup, Ben Abbott
 
 
 ## Link to Deployed Project
-https://benabbott85.github.io/Project-1/
+https://mnorthup2207.github.io/EasiCuisi_recipe_API/.
