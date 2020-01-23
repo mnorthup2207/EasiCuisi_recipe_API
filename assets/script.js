@@ -35,7 +35,6 @@ $('.recipeInputs').on('submit', function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        console.log(response)
         filteredRecipes = response.hits;
         if (serving) filteredRecipes = filteredRecipes.filter(item => item.recipe.yield == serving)
         if (cooking) filteredRecipes = filteredRecipes.filter(item => item.recipe.totalTime <= cooking)
@@ -61,7 +60,6 @@ $('.carousel').on('click', '#carouselLabel', function (e) {
     e.preventDefault();
     var carouselSelect = $(this).html();
     filteredRecipe = filteredRecipes.filter(item => item.recipe.label == carouselSelect);
-    console.log(filteredRecipe)
     $('#test-swipe-1').html($('<div class="ingredDiv">'));
     $('.ingredDiv').append(`<h5>${carouselSelect}</h5>`)
     $('.ingredDiv').append(`<ol class="ingredientList"></ol>`)
@@ -76,7 +74,6 @@ $('.carousel').on('click', '#carouselLabel', function (e) {
     var userSearchTerm = filteredRecipe[0].recipe.label;
     userSearchTerm = userSearchTerm.split(" ").join("+")
     var urlVid = `https://www.youtube.com/embed?listType=search&list=${userSearchTerm}`
-    console.log(urlVid)
     $('.youtubeP').append(`<iframe id="player" type="text/html" width="640" height="390"
     src="${urlVid}" frameborder="0"></iframe>`)
     // youtube call

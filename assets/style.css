@@ -213,3 +213,29 @@ left: 310%;
 .youtubeP{
     width: 50%;
 }
+
+/* media width restraints */
+@media screen and (max-width: 800px) {
+    #formDiv{
+        width: 100%;
+    }
+    #searchbtn{
+        left: 9rem;
+        top: 6rem;
+    }
+    .carousel .carousel-item>img {
+        width: 75%;
+    }
+    #resultsDiv {
+        left: 38%;
+        position: absolute;
+        top: 20%;
+    }
+    .carousel{
+        height: 100px;
+    }
+    .modal {
+        left: -19px;
+        width: 100%;
+    }
+  }
